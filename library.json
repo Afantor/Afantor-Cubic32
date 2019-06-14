@@ -1,0 +1,21 @@
+{
+  "name": "Afantor-ESP32",
+  "version": "0.1.0",
+  "keywords": "tft, ePaper, display, ESP32, ILI9341",
+  "description": "A TFT and ePaper SPI graphics library for ESP32",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/Afantor/Afantor-ESP32"
+  },
+  "authors":
+  [
+    {
+        "name": "Afantor",
+        "email": "",
+        "maintainer": true
+    }
+  ],
+  "frameworks": "arduino",
+  "platforms": "espressif32"
+}
