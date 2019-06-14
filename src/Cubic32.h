@@ -99,7 +99,9 @@
 
 #if defined(ESP32)
 
-// #define MPU6050_INSDE
+#define MPU6050_INSDE
+#define AHT10_INSDE
+#define RTC_INSDE
 
 #include <Arduino.h>
 #include <Wire.h>
@@ -118,6 +120,14 @@
 #include "utility/Speaker.h"
 #include "utility/Timer.h"
 #include "utility/EasyBuzzer.h"
+
+#ifdef AHT10_INSDE
+#include "utility/AHT10.h"
+#endif
+
+#ifdef RTC_INSDE
+#include "utility/PCF8563T.h"
+#endif
 
 #ifdef MPU6050_INSDE
 #include "utility/MPU6050.h"
@@ -151,6 +161,14 @@ class Cubic32 {
     // MPU6050
 #ifdef MPU6050_INSDE
     MPU6050 IMU = MPU6050();
+#endif
+
+#ifdef AHT10_INSDE
+    AHT10Class AHT10 = AHT10Class();
+#endif
+
+#ifdef RTC_INSDE
+    PCF8563T RTC = PCF8563T();
 #endif
 
  private:

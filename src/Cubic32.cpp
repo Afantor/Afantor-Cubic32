@@ -48,6 +48,16 @@ void Cubic32::begin(bool LCD_Enable, bool SD_Enable) {
     Wire.begin();
 #endif
 
+    //ANT10
+#ifdef ANT10_INSDE
+    Wire.begin();
+
+    if(ANT10.begin(eAHT10Address_Low))
+        Serial.println("Init AHT10 Sucess.");
+    else
+        Serial.println("Init AHT10 Failure.");
+#endif    
+
     Serial.println("OK");
 }
 
