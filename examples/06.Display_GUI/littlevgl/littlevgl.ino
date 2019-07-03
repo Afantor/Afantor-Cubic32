@@ -57,7 +57,7 @@ bool my_input_read(lv_indev_data_t *data)
 void setup() {
     Cubic.begin(true,false);
     
-    Cubic.Lcd.setRotation(1);
+    Cubic.Lcd.setRotation(3);
     
     lv_init();
     

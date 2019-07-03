@@ -99,9 +99,9 @@
 
 #if defined(ESP32)
 
-#define MPU6050_INSDE
-#define AHT10_INSDE
-#define RTC_INSDE
+// #define MPU6050_INSDE
+// #define AHT10_INSDE
+// #define RTC_INSDE
 
 #include <Arduino.h>
 #include <Wire.h>
